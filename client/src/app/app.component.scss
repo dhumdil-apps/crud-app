@@ -1,0 +1,15 @@
+
+.app {
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  > div {
+    color: #369;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 64px;
+    font-weight: 100;
+    margin: auto;
+    text-align: center;
+  }
+}

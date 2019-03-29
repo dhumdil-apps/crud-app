@@ -1,0 +1,42 @@
+{
+  "name": "crud-server",
+  "version": "1.0.0",
+  "scripts": {
+    "postinstall": "cd ./client && npm i --no-optional",
+    "start-client": "cd ./client && npm start",
+    "start-server": "nodemon",
+    "start:prod": "npm run build && node dist/main.js",
+    "lint-client": "cd ./client && npm run lint",
+    "lint-server": "tslint -p tsconfig.json -c tslint.json",
+    "build": "npm run build-client && npm run build-server",
+    "build-client": "rimraf public/app && cd ./client && npm run build",
+    "build-server": "rimraf dist && tsc -p tsconfig.build.json",
+    "generate-secret-key": "ts-node scripts/generate-secret-key.ts"
+  },
+  "dependencies": {
+    "@nestjs/common": "^6.0.0",
+    "@nestjs/core": "^6.0.0",
+    "@nestjs/platform-express": "^6.0.4",
+    "body-parser": "^1.18.3",
+    "cache-manager": "^2.9.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.4",
+    "csurf": "^1.9.0",
+    "dotenv": "^7.0.0",
+    "express-rate-limit": "^3.4.0",
+    "hbs": "^4.0.3",
+    "helmet": "^3.16.0",
+    "reflect-metadata": "^0.1.12",
+    "rimraf": "^2.6.2",
+    "rxjs": "^6.3.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/node": "^10.12.18",
+    "nodemon": "^1.18.10",
+    "ts-node": "^7.0.1",
+    "tsconfig-paths": "^3.7.0",
+    "tslint": "5.12.1",
+    "typescript": "^3.2.4"
+  }
+}

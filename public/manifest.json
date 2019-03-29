@@ -1,0 +1,14 @@
+{
+  "name": "MY JEKA",
+  "short_name": "JEKA",
+  "start_url": ".",
+  "display": "browser",
+  "background_color": "#fff",
+  "theme_color": "#000",
+  "description": "Activity Planner",
+  "icons": [{
+    "src": "/modules/core/client/img/my-jeka.png",
+    "sizes": "128x128",
+    "type": "image/png"
+  }]
+}

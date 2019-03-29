@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <base href="/">
+
+  <title>{{ title }}</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Activity Planner">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="msapplication-TileColor" content="#9f00a7">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9f00a7">
+
+  <link href="/manifest.json" rel="manifest">
+
+  <style>
+
+    svg:not(:root) {
+      overflow: hidden
+    }
+
+    :active, :focus {
+      outline: 0!important
+    }
+
+    html {
+      line-height: 1.15;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%
+    }
+
+    html, body, app-root {
+      display: block;
+      overflow: hidden;
+      max-width: 100%;
+      max-height: 100%;
+      min-width: 100%;
+      min-height: 100%;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: 400;
+      transition: border-bottom 0.35s;
+      color: #1565C0;
+    }
+
+    .full-screen {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #fff
+    }
+
+    .app-logo {
+      position: absolute;
+      top: calc(50% - 32px);
+      left: calc(50% - 32px);
+      width: 64px;
+      height: 64px;
+    }
+
+    .app-loader {
+      position: absolute;
+      top: calc(50% - 34px);
+      left: calc(50% - 34px);
+      width: 64px;
+      height: 64px;
+      border: 2px solid #eee;
+      border-radius: 32px;
+      border-top: 2px solid #369;
+      animation: spin .8s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(45deg)
+      }
+      10% {
+        transform: rotate(90deg)
+      }
+      40% {
+        transform: rotate(270deg)
+      }
+      60% {
+        transform: rotate(315deg)
+      }
+      80% {
+        transform: rotate(360deg)
+      }
+      100% {
+        transform: rotate(405deg)
+      }
+    }
+
+  </style>
+
+</head>
+<body layout="row" layout-fill>
+
+<app-root>
+  <div class="full-screen">
+    <img class="app-logo" alt="App Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+    <div class="app-loader"></div>
+  </div>
+</app-root>
+
+<!-- How to enable JavaScript in your browser -->
+<noscript>
+
+  <style>
+    [ng\:cloak], [ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+      display: block !important;
+    }
+  </style>
+
+  For functionality of this site it is necessary to enable JavaScript.
+  Here are the <a href="https://www.enable-javascript.com/">
+  instructions how to enable JavaScript in your web browser</a>.
+
+</noscript>
+
+{{{ scripts }}}
+
+</body>
+</html>
