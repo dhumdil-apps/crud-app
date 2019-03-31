@@ -10,8 +10,8 @@
     "allowSyntheticDefaultImports": true,
     "target": "es6",
     "sourceMap": true,
-    "outDir": "./dist",
+    "outDir": "./server",
     "baseUrl": "./"
   },
-  "exclude": ["node_modules", "client", "scripts"]
+  "exclude": ["node_modules", "ng", "scripts"]
 }

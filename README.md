@@ -1,4 +1,4 @@
-# CRUD App
+# crud-app
 
 ## Setup
 ```bash
@@ -10,17 +10,10 @@ $ npm i
 
 ## Development
 ```bash
-# Watch both client and server files:
-$ npm run start-client
-$ npm run start-server
+$ npm start
 ```
 
 ## Production
 ```bash
-$ npm start:prod
-```
-
-## Utilities:
-```bash
-$ npm run generate-secret-key
+$ npm run start:prod
 ```
