@@ -1,5 +1,5 @@
 {
-  "watch": ["server"],
+  "watch": ["nest"],
   "ext": "ts",
-  "exec": "ts-node -r tsconfig-paths/register server/main"
+  "exec": "ts-node -r tsconfig-paths/register nest/main"
 }
