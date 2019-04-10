@@ -1,15 +1,25 @@
-
 .app {
+  color: #306090;
   display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
 
-  > div {
-    color: #369;
-    font-family: Consolas, Monaco, monospace;
-    font-size: 64px;
-    font-weight: 100;
-    margin: auto;
-    text-align: center;
+  .users {
+    display: flex;
+    flex-direction: column;
+    font-size: 32px;
+    margin: 0 50px;
+  }
+  .user {
+    cursor: pointer;
+    display: flex;
+    background: #eee;
+    margin: 5px 0;
+    padding: 10px;
+
+    &:hover {
+      background: #ccc;
+    }
   }
 }

@@ -13,5 +13,6 @@
     "outDir": "./server",
     "baseUrl": "./"
   },
-  "exclude": ["node_modules", "ng", "scripts"]
+  "exclude": ["node_modules", "ng", "scripts", "public"],
+  "include": ["nest/**/*.ts"]
 }

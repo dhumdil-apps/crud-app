@@ -1,4 +1,17 @@
-
 <div class="app">
-  <div>{{ title }}</div>
+
+  <div class="layout-row layout-center">
+    <h1>CRUD app</h1>
+  </div>
+
+  <div class="users">
+
+    <h2>Users ({{ size }})</h2>
+
+    <div class="user layout-row" *ngFor="let user of users; let i = index">
+      <h3>{{ i + 1 }}. {{ user.name }}</h3>
+    </div>
+
+  </div>
+
 </div>

@@ -1,0 +1,50 @@
+
+svg:not(:root) {
+  overflow: hidden
+}
+
+:active, :focus {
+  outline: 0!important
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.15;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+  transition: border-bottom 0.35s;
+  color: #1565C0;
+}
+
+h1 {
+  font-weight: 700;
+}
+h2, h3, h4, h5, h6 {
+  font-weight: 100;
+}
+
+.layout-row {
+  display: flex;
+}
+
+.layout-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-center {
+  justify-content: center;
+}
+
+.flex {
+  flex: 1;
+}
+
+.margin-auto {
+  margin: auto;
+}

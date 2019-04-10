@@ -1,25 +1,38 @@
 // nest
-import { Inject, Injectable } from '@nestjs/common';
-
-// external
-import { Model } from 'mongoose';
+import { Injectable } from '@nestjs/common';
 
 // internal
-import { IUser } from '../../interfaces';
-import { CreateUserDto } from '../../dto';
+import { User, UserModel } from '../../models/user/user.model';
 
 @Injectable()
 export class UserService {
 
-  constructor(@Inject('USER_MODEL') private readonly userModel: Model<IUser>) {}
-
-  async create(createUserDto: CreateUserDto): Promise<IUser> {
-    const createdUser = new this.userModel(createUserDto);
-    return await createdUser.save();
+  async count(): Promise<number> {
+    return await UserModel.countDocuments({}).exec();
   }
 
-  async findAll(): Promise<IUser[]> {
-    return await this.userModel.find().exec();
+  async list(): Promise<User[]> {
+    return await UserModel.find().exec();
+  }
+  async create(user: User): Promise<User> {
+    const userModel = new UserModel(user);
+    return await userModel.save();
+  }
+
+  async read(id: string): Promise<User> {
+    return await UserModel.findOne({ _id: id });
+  }
+
+  async update(id: string, user: User): Promise<User> {
+    return await UserModel.findOneAndUpdate(
+      { _id: id },
+      { $set: user},
+      { new: true, upsert: true, runValidators: true },
+    );
+  }
+
+  async delete(id: string): Promise<User> {
+    return await UserModel.findOneAndDelete({ _id: id });
   }
 
 }

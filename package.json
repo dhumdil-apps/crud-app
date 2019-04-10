@@ -11,7 +11,7 @@
     "lint:server": "tslint -p tsconfig.json -c tslint.json",
     "build": "npm run build:client && npm run build:server",
     "build:client": "cd ng && npm run build && cd .. && npm run add-defer-to-script-tags",
-    "build:server": "rimraf server && tsc -p tsconfig.build.json",
+    "build:server": "rimraf server && tsc -p tsconfig.json",
     "generate-secret-key": "ts-node scripts/generate-secret-key.ts",
     "add-defer-to-script-tags": "ts-node scripts/add-defer-to-script-tags.ts"
   },
@@ -28,11 +28,13 @@
     "csurf": "^1.9.0",
     "dotenv": "^7.0.0",
     "express-rate-limit": "^3.4.0",
+    "express-session": "^1.15.6",
     "helmet": "^3.16.0",
     "mongoose": "^5.4.20",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.3.3",
+    "typegoose": "^5.6.0",
     "typescript": "^3.2.4"
   },
   "devDependencies": {

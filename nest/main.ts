@@ -8,14 +8,16 @@ import { AppConfiguration } from './app.configuration';
 
 async function bootstrap() {
 
-  AppConfiguration.configureEnvironment();
+  const config = new AppConfiguration();
+
+  config.configureEnvironment();
+  config.configureDatabase();
 
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
-  AppConfiguration.configureSecurity(app);
-  AppConfiguration.configureCompression(app);
-  AppConfiguration.configureAssets(app);
-  AppConfiguration.configureExceptions(app);
+  config.configureSecurity(app);
+  config.configureCompression(app);
+  config.configureAssets(app);
 
   await app.listen(process.env.APP_PORT);
 
